@@ -1,51 +1,48 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>  
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Encriptador Challenge</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-
-        <img class="logo" src="/Imagenes/Logo Alura.png" alt="Logo Alura">
+        <div class="container__header"> 
+            <div class="header"> 
+                    <img class="Logo" src="Imagenes/Alura.png" alt="Logo-Alura">
+            </div>  
+        </div>
     </header>
     <main>
-        <section class="Seccion1">
-            <div class="contenido-caja-texto">
-                <textarea placeholder="Ingrese el texto aquí" class="cajatexto"></textarea>
-            </div>
-            <div class="alerta">
-                <img src="/Imagenes/!.png" alt="Alerta">
-                <p> Solo letras minúsculas y sin tildes </p>
-            </div>
-            <div class="contenedor-botones">
-                <input type="button" class="btn-encriptar"
-                value="Encriptar">
-                <input type="button" class="btn-desencriptar"
-                value="Desencriptar">
-            </div>
-        </section>
-        <section class="Seccion2">
-            <div class="contenedor-muñeco">
-                <img src="/Imagenes/Muñeco.png" alt="Muñeco">
-            </div>
-            <div class="contenedor-parrafo">
-                <h3>Ningún mensaje fue <br> encontrado </h3>
-                <p> Ingresa el texto que desees encriptar o <br> desencriptar. </p>
-            </div>
-            <div class="contenedor-copiar">
-                <input type="button" class="btn-copiar" value="Copiar">
-            </div>
-            <div class="contenedor-resultado">
-                <p class="texto-resultado"></p>
-            </div>
+        <article class="container">
+            <section class="left" id="left">
+                <textarea class="inputtextarea" id="textoInput" placeholder="Ingrese el texto aquí" autofocus></textarea>
+                <div class="content_botones">
+                    
+                    <img class="Info" src="/Imagenes/!.png" alt="Info">
+                    <div> Solo letras minúsculas y sin acentos </div>
+                  
+                    <div class="botones">
+                        <button id="button__encriptar" class="button__encriptar">Encriptar</button>
+                        <button id="button__desencriptar" class="button__desencriptar">Desencriptar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="right" id="rigth">
 
-        </section>
+                <img class="Muneco" src="/Imagenes/Muneco.png" alt= "Muñeco con lupa viendo un diamante">
+
+                <textarea id="textoFinal" class="textoFinal" placeholder="Ningún mensaje fue encontrado"></textarea>
+                <p id="textoInfo" class="info">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="button__copiar bn_ocultar" id="button__copiar">Copiar</button>
+            </section>
+        </article>
     </main>
-    <script src="/script.js"> 
-    </script>
+    <footer></footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
